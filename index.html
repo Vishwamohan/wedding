@@ -425,8 +425,6 @@
     </section>
     <!-- END SECTION: featured-people -->
 
-
-
     <!-- START: footer -->
     <section id="footer" class="img-bg-5" data-stellar-background-ratio="0.5">
         <div class="container">
@@ -453,6 +451,7 @@
     <!-- Bootstrap main Js File-->
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 
 
@@ -486,9 +485,11 @@
                 var audio = document.createElement("AUDIO")
                 document.body.appendChild(audio);
                 audio.src = "img/into.mp3"
-                document.body.addEventListener("mouseover", function () {
-                    audio.play()
-                })
+                // window.addEventListener('scroll', function (e) {
+                //                    })
+                $(document).on("scrollstart", function () {
+                    audio.play();
+                });
             }, 200);
         })
 
